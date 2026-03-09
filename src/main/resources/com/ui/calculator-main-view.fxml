@@ -18,15 +18,15 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<SplitPane dividerPositions="0.4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.MainController">
-   <items>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.MainController">
+   <children>
       <!-- Inputs -->
+      <TitledPane animated="false" text="Paskolos Parametrai (Spustelėkite, kad paslėptumėte)">
       <VBox spacing="10.0">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <children>
-            <Label style="-fx-font-weight: bold; -fx-font-size: 16;" text="Paskolos Parametrai" />
             
             <GridPane hgap="10.0" vgap="10.0">
               <children>
@@ -106,9 +106,10 @@
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onShowChartClick" text="Rodyti Mokėjimų Grafiką" />
          </children>
       </VBox>
+      </TitledPane>
       
       <!-- Results -->
-      <VBox fx:id="resultBox">
+      <VBox fx:id="resultBox" VBox.vgrow="ALWAYS">
          <children>
             <TableView fx:id="paymentsTable" prefWidth="200.0" VBox.vgrow="ALWAYS">
               <columns>
@@ -124,5 +125,5 @@
             </TableView>
          </children>
       </VBox>
-   </items>
-</SplitPane>
+   </children>
+</VBox>
