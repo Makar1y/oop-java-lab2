@@ -39,7 +39,7 @@
                   <Label text="Trukme:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
                   <TextField fx:id="monthsField1" promptText="Mėnesiai" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   
-                  <Label text="Metinės palūkanos (%):" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                  <Label text="Metinis %:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
                   <TextField fx:id="interestField" promptText="Pvz. 5.5" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
                   
                   <Label text="Tipas:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
@@ -103,6 +103,7 @@
             </HBox>
             
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSaveReportClick" text="Išsaugoti Į Failą" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onShowChartClick" text="Rodyti Mokėjimų Grafiką" />
          </children>
       </VBox>
       
@@ -111,8 +112,7 @@
          <children>
             <TableView fx:id="paymentsTable" prefWidth="200.0" VBox.vgrow="ALWAYS">
               <columns>
-                <TableColumn fx:id="colYear" prefWidth="40.0" text="Metai" />
-                <TableColumn fx:id="colMonth" prefWidth="45.0" text="Mėn." />
+                <TableColumn fx:id="colDate" prefWidth="85.0" text="Data" />
                   <TableColumn fx:id="colTotal" prefWidth="80.0" text="Įmoka" />
                   <TableColumn fx:id="colPrincipal" prefWidth="80.0" text="Pagrind." />
                   <TableColumn fx:id="colInterest" prefWidth="80.0" text="Palūkanos" />
@@ -122,14 +122,6 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <LineChart fx:id="paymentsChart" prefHeight="250.0" title="Mokėjimų Grafikas" VBox.vgrow="ALWAYS">
-              <xAxis>
-                <NumberAxis label="Mėnuo" side="BOTTOM" fx:id="xAxis" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis fx:id="yAxis" label="Suma" side="LEFT" />
-              </yAxis>
-            </LineChart>
          </children>
       </VBox>
    </items>
