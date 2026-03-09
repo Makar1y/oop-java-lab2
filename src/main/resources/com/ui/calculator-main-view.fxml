@@ -37,7 +37,7 @@
                   <Label text="Pradžia:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
                   
                   <Label text="Trukme:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                  <TextField fx:id="monthsField1" promptText="Mėnesiai" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="monthsField" promptText="Mėnesiai" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   
                   <Label text="Metinis %:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
                   <TextField fx:id="interestField" promptText="Pvz. 5.5" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
